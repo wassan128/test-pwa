@@ -3,6 +3,14 @@
 <head>
     <meta charset="utf-8"/>
     <title>PWA test</title>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./service_worker.js").then(() => {
+            console.log("registered");
+        });
+    }
+    </script>
 </head>
 <body>
     <h1>Hello, PWA!</h1>
